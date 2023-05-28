@@ -23,7 +23,7 @@ node {
 
     stage('publish docker') {
         docker.withRegistry('vrank18',) {
-            dockerImage.push "${orrVersion}"
+            dockerImage.push "${Version}"
         }
     }
 
