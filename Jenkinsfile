@@ -27,11 +27,6 @@ node {
         }
     }
 
-    #stage('delete docker Image') {
-    #    sh "docker rmi crisil/orrmodule"
-    #    sh "docker rmi 120.20.2.142:37719/crisil/orrmodule:${orrVersion}"
-    #    }
-
     stage('run in 120.20.2.142') {
   		sshagent (credentials: ['root1020116']) {
         sh "echo 'orrVersion=${orrVersion}' > .env"
